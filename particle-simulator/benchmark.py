@@ -11,7 +11,7 @@ def benchmark():
     ]
 
     simulator = ParticleSimulator(particles)
-    simulator.evolve(0.1)
+    simulator.evolve(0.001)
 
 if __name__ == '__main__':
     benchmark()

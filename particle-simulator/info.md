@@ -6,3 +6,5 @@
 - pytest & pytest-benchmark: for testing and benchmarking
 - cProfile: to find bottlenecks
 - line_profiler: to get information how time is spent in a line-by-line fashion
+- dis module: to help us improve perfromance of the code by looking at the instrucions for statements and reduce them
+- memory_profiler: for profiling memory usage
