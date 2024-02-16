@@ -6,17 +6,9 @@ class ParticleSimulator:
         timestep = 0.00001
         nsteps = int(dt/timestep)
 
-        for i in range(nsteps):
-            for p in self.particles:
+        for p in self.particles:
+            t_x_ang = timestep * p.ang_vel
+            for i in range(nsteps):
                 # calculate the direction
                 norm = (p.x**2 + p.y**2)**0.5
-                v_x = -p.y/norm
-                v_y = p.x/norm
-
-                # calculate the displacement
-                d_x = timestep * p.ang_vel * v_x
-                d_y = timestep * p.ang_vel * v_y
-
-                p.x += d_x
-                p.y += d_y
-                # repeat for all the time steps
+                p.x, p.y = (p.x - t_x_ang * p.y/norm, p.y + t_x_ang * p.x/norm)
