@@ -5,3 +5,4 @@
 - timeit module: the same function as **time**
 - pytest & pytest-benchmark: for testing and benchmarking
 - cProfile: to find bottlenecks
+- line_profiler: to get information how time is spent in a line-by-line fashion
