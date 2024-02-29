@@ -19,7 +19,7 @@ def visualize(simulator):
     
     def animate(i):
         # let the particle evolve for 0.01 time units
-        simulator.evolve(0.01)
+        simulator.evolve_numpy(0.01)
         X = [p.x for p in simulator.particles]
         Y = [p.y for p in simulator.particles]
 
