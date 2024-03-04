@@ -13,9 +13,9 @@ def main():
     p_elems = [element.text for element in soup.find_all('p')]
     speech = ''.join(p_elems)
     speech = speech.replace(')mowing', 'knowing')
-    speech = re.sub('\s+', ' ', speech)
+    speech = re.sub('\\s+', ' ', speech)
     speech_edit = re.sub('[^a-zA-Z]', ' ', speech)
-    speech_edit = re.sub('\s+', ' ', speech_edit)
+    speech_edit = re.sub('\\s+', ' ', speech_edit)
 
     while True:
         max_words = input("Enter maximum words per sentence for summary: ")
