@@ -11,7 +11,7 @@ def main():
     page.raise_for_status()
     soup = bs4.BeautifulSoup(page.text, 'html.parser')
     p_elems = [element.text for element in soup.find_all('p')]
-    speech = ''.join(p_elems)
+    speech = ' '.join(p_elems)
     speech = speech.replace(')mowing', 'knowing')
     speech = re.sub('\\s+', ' ', speech)
     speech_edit = re.sub('[^a-zA-Z]', ' ', speech)
